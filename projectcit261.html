@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="style.css">
+<script src="projectcit261.js"></script>
+</head>
+<body style="font-family:Verdana;">
+
+ 
+<div class="topnav" id="myTopnav" onclick="navBar()">
+      <a href="#home" class="active">Home</a>
+      <a href="#news">Location</a>
+      <a href="#contact">Contact</a>
+      <a href="#about">About</a>
+      <a href="javascript:void(0);" class="icon" onclick="myfunction()">
+      <i class="fa fa-bars"></i>
+      </a>
+</div>
+
+<div class = "textStyle" style="background-color:#f1f1f1;">
+        <h1>HOTEL DODA</h1>
+        <h6>HOTEL-SPA-RESTAURANT</h6>
+        
+</div>
+
+
+  <div class="main">
+    <h1 class = "panel-title">A Little Bit About Us</h1>
+    <p><small>The hotel has 9 rooms in total, where each one of them is in a different style. Our staff is made of 20 people. They are always there to serve you everything you need in your room. The restaurant of the hotel is open also during the night so you can order food in any time</small></p>
+    <p> <span id = "text-signature">Kastriot Doda</span> <br> <span style="font-family:courier;">[The manager]</span></p>
+  </div>
+
+  
+  
+  <div class="main">
+    <h1 class = "panel-title">Here are our best rooms</h1>
+</div>
+  <button class="collapsible">Executive Deluxe</button>
+<div class="content">
+  <img src="room1.jpg" style="width:100%">
+  <img src="bathroom1.jpg" style="width:100%">
+  <img src="" style="width:100%">
+</div>
+<button class="collapsible">Colonial Suite</button>
+<div class="content">
+<img src="deluxe.jpg" style="width:100%">
+<img src="bath2.jpg" style="width:100%">
+</div>
+<button class="collapsible"> Colonial Superior</button>
+<div class="content">
+  <img src="Make-the-rooms-luxurious.jpg" style="width:100%">
+  <img src="venetian.jpg" style="width:100%">
+</div>
+<button class="collapsible">Colonial Deluxe</button>
+<div class="content">
+    <img src="images.jpg" style="width:100%">
+    <img src="concept1.jpg " style="width:100%">
+  </div>
+<script>
+createCollapsible();
+</script>
+
+  <div class="container">
+    <form>
+      <div class="row">
+        <div class="col-25">
+          <label for="fname" style="color:lightgray">First Name</label>
+        </div>
+        <div class="col-75">
+          <input type="text" id="fname" name="firstname" placeholder="Your name..">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-25">
+          <label for="lname" style="color:lightgray">Last Name</label>
+        </div>
+        <div class="col-75">
+          <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-25">
+           <label for="room" style="color:lightgray">Type of rooms</label>
+        </div>
+        <div class="col-75">
+  
+      <select onchange="changeMe(this)" id="room" name="room">
+        <option selected disabled value="" >Select type of room</option>
+        <option value="Colonial Suite">Colonial Suite</option>
+        <option value="Deluxe">Deluxe</option>
+        <option value="Standard">Standard</option>
+      </select>
+
+      <div class="col-25">
+        <label for="room" style="color:lightgray">Rooms</label>
+     </div>
+ 
+      <select  id="roomNumbers" onchange="populateRooms(this)" >
+        <option selected disabled  >Select number of rooms</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+      </select>
+
+
+
+        <div class="col-25">
+      <div id="roomsToDisplay"></div>
+      </div>
+
+      <label style="color:lightgray">Date</label>
+      <input type="date">
+        </div>
+      </div>
+    <br>
+      <div class="row">
+        <input type="submit" value="Submit">
+      </div>
+    </form>
+  </div>
+</body>
+</html>
